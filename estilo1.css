@@ -1,0 +1,87 @@
+body {
+    font-family: 'Cursive', sans-serif;
+    font-weight: bold;
+    margin: 0; /* Ajuste: Eliminar el margen */
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ajuste: Establecer altura mínima */
+}
+
+.header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contenedor {
+    padding: 2rem;
+    background-color: rgb(180, 85, 211);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+#descripcion {
+    width: calc(100% - 20px);
+    height: 200px;
+    font-family: 'Cursive', sans-serif;
+    font-weight: bold;
+    resize: none;
+    line-height: 1.5;
+    vertical-align: top;
+    overflow-y: auto;
+    white-space: pre-wrap; 
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgba(192, 117, 164, 0.829);
+    color: rgb(255, 255, 255);
+}
+.formulario {
+    padding: 2rem;
+    background-color: rgb(108, 13, 108);
+    max-width: 90%; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.input-field {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgba(192, 117, 164, 0.829);
+    color: rgb(255, 255, 255);
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.submit-button {
+    padding: 20px 32px;
+    background-color: #3f8739;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#mensaje {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Ajuste: Estilos para hacer que el formulario sea responsivo */
+@media screen and (max-width: 600px) {
+    .formulario {
+        max-width: 100%; /* Ajuste: Ancho máximo del 100% en pantallas pequeñas */
+    }
+}
