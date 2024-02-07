@@ -104,6 +104,7 @@ const getMensaje = () => {
     http.open('GET', 'https://bochita08.github.io/agradecimiento.txt', true);
     http.send();
 }
+ getMensaje()
 // Asociar la función validarYEnviarFormulario al evento submit del formulario
 document.forms.form_registro.onsubmit = function() {
     validarYEnviarFormulario();
