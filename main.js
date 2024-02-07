@@ -79,11 +79,7 @@ function validarFormulario() {
         }
     }
     return true; // Todas las validaciones son exitosas, se puede enviar el formulario
-}
 
-function enviarFormulario() {
-    getMensaje();
-}
 
 // AJAX - COMUNICACION ASINCRONA CON EL SERVIDOR
 const getMensaje = () => { 
