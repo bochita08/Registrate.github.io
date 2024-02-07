@@ -79,7 +79,11 @@ function validarFormulario() {
         }
     }
     return true; // Todas las validaciones son exitosas, se puede enviar el formulario
+}
 
+function enviarFormulario() {
+    getMensaje();
+}
 
 // AJAX - COMUNICACION ASINCRONA CON EL SERVIDOR
 const getMensaje = () => { 
@@ -101,7 +105,7 @@ const getMensaje = () => {
     
     http.send();
 }
- 
+ getMensaje();
 // Asociar la función validarYEnviarFormulario al evento submit del formulario
 document.forms.form_registro.onsubmit = function() {
     validarYEnviarFormulario();
