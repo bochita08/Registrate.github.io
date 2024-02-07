@@ -101,7 +101,7 @@ const getMensaje = () => {
     };
 
     // Leer el archivo
-    http.open('GET', 'http://localhost/proyecto_pwa/mi_formulario/agradecimiento.txt', true);
+    http.open('GET', 'https://github.com/bochita08/bochita08.github.io/blob/main/agradecimiento.txt', true);
     
     http.send();
 }
