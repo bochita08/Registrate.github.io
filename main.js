@@ -24,7 +24,7 @@ function validarYEnviarFormulario() {
     // Verificar si todas las validaciones son exitosas antes de enviar el formulario
     if (validarFormulario()) {
         // Realizar la solicitud AJAX
-        enviarFormulario();
+        obtenerMensaje();
     }
 }
 
@@ -81,11 +81,16 @@ function validarFormulario() {
     return true; // Todas las validaciones son exitosas, se puede enviar el formulario
 }
 
-// Función para enviar el formulario (simulado por ahora)
-function enviarFormulario() {
-    // Aquí puedes realizar la solicitud AJAX real si lo deseas
-    // Por ahora, simplemente mostrar un mensaje de éxito
-    document.getElementById("mensaje").innerHTML = "¡Gracias por registrarte!";
+// Función para obtener el mensaje de agradecimiento desde el archivo
+function obtenerMensaje() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("mensaje").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", "agradecimiento.txt", true);
+    xhttp.send();
 }
 
 // Asociar la función validarYEnviarFormulario al evento submit del formulario
