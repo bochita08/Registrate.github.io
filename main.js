@@ -101,7 +101,7 @@ const getMensaje = () => {
     };
 
     // Leer el archivo
-    http.open('GET', 'https://github.com/bochita08/bochita08.github.io/blob/main/agradecimiento.txt', true);
+    http.open('GET', 'https://bochita08.github.io/agradecimiento.txt', true);
     
     http.send();
 }
