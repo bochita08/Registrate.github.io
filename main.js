@@ -1,6 +1,6 @@
 // main.js
 
-// Obtener valores de los campos y realizar validaciones
+// Función principal para validar y enviar el formulario
 function validarYEnviarFormulario() {
     const nombre = document.getElementById("nombre").value;
     const apellido = document.getElementById("apellido").value;
@@ -79,25 +79,13 @@ function validarFormulario() {
         }
     }
     return true; // Todas las validaciones son exitosas, se puede enviar el formulario
+}
 
-// AJAX - COMUNICACION ASINCRONA CON EL SERVIDOR
-const getMensaje = () => { 
-    const http = new XMLHttpRequest();
-    http.onreadystatechange = () => { 
-        console.log("onreadystatechange");
-        console.log(http.readyState); // si todo está bien un 4 o 200 sino un 400
-        console.log(http.status);
-
-        // Verificamos el estado
-        if(http.readyState == 4 && http.status == 200){
-            // Actualiza el elemento HTML con la respuesta del servidor.
-            document.getElementById("mensaje").innerHTML = http.responseText;
-        }
-    };
-
-    // Leer el archivo
-    http.open('GET', 'https://bochita08.github.io/agradecimiento.txt', true);
-    http.send();
+// Función para enviar el formulario (simulado por ahora)
+function enviarFormulario() {
+    // Aquí puedes realizar la solicitud AJAX real si lo deseas
+    // Por ahora, simplemente mostrar un mensaje de éxito
+    document.getElementById("mensaje").innerHTML = "¡Gracias por registrarte!";
 }
 
 // Asociar la función validarYEnviarFormulario al evento submit del formulario
